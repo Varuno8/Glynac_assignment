@@ -1,0 +1,123 @@
+{
+  "client_id": "client_103",
+  "name": "Marcus Vance",
+  "age": 29,
+  "employment": {
+    "occupation": "Product Marketing Lead",
+    "annual_income": 190000.0,
+    "employer": "FinPulse Tech"
+  },
+  "accounts": [
+    {
+      "account_id": "acc_chk_103",
+      "type": "CHECKING",
+      "institution": "SoFi Bank",
+      "balance": 3200.0,
+      "currency": "USD",
+      "interest_rate_apy": 0.005
+    },
+    {
+      "account_id": "acc_brk_103",
+      "type": "BROKERAGE_TAXABLE",
+      "institution": "Robinhood",
+      "balance": 235000.0,
+      "currency": "USD",
+      "holdings": [
+        {
+          "ticker": "TSLA",
+          "asset_class": "US_EQUITY",
+          "shares": 650,
+          "current_price": 250.0,
+          "market_value": 162500.0,
+          "cost_basis": 140000.0
+        },
+        {
+          "ticker": "PLTR",
+          "asset_class": "US_EQUITY",
+          "shares": 1812.5,
+          "current_price": 40.0,
+          "market_value": 72500.0,
+          "cost_basis": 45000.0
+        }
+      ]
+    },
+    {
+      "account_id": "acc_roth_103",
+      "type": "ROTH_IRA",
+      "institution": "Charles Schwab",
+      "balance": 72000.0,
+      "currency": "USD",
+      "holdings": [
+        {
+          "ticker": "QQQM",
+          "asset_class": "US_EQUITY",
+          "shares": 360,
+          "current_price": 200.0,
+          "market_value": 72000.0,
+          "cost_basis": 58000.0
+        }
+      ]
+    }
+  ],
+  "monthly_cashflow": {
+    "average_monthly_net_income": 11000.0,
+    "average_monthly_expenses": 10800.0,
+    "monthly_mortgage": 0.0
+  },
+  "recent_transactions": [
+    {
+      "tx_id": "tx_103_01",
+      "date": "2026-09-01",
+      "account_id": "acc_chk_103",
+      "category": "RENT",
+      "amount": 4500.0,
+      "type": "DEBIT",
+      "description": "Luxury High-Rise Luxury Apartments"
+    },
+    {
+      "tx_id": "tx_103_02",
+      "date": "2026-09-08",
+      "account_id": "acc_chk_103",
+      "category": "NIGHTLIFE",
+      "amount": 1850.0,
+      "type": "DEBIT",
+      "description": "Lavo Club New York"
+    },
+    {
+      "tx_id": "tx_103_03",
+      "date": "2026-09-12",
+      "account_id": "acc_chk_103",
+      "category": "SHOPPING",
+      "amount": 2400.0,
+      "type": "DEBIT",
+      "description": "SSENSE Fashion NYC"
+    },
+    {
+      "tx_id": "tx_103_04",
+      "date": "2026-09-15",
+      "account_id": "acc_chk_103",
+      "category": "PAYROLL",
+      "amount": 5500.0,
+      "type": "CREDIT",
+      "description": "FinPulse Direct Deposit"
+    },
+    {
+      "tx_id": "tx_103_05",
+      "date": "2026-09-24",
+      "account_id": "acc_chk_103",
+      "category": "CRYPTO_PURCHASE",
+      "amount": 3500.0,
+      "type": "DEBIT",
+      "description": "Coinbase ACH Purchase"
+    },
+    {
+      "tx_id": "tx_103_06",
+      "date": "2026-09-30",
+      "account_id": "acc_chk_103",
+      "category": "PAYROLL",
+      "amount": 5500.0,
+      "type": "CREDIT",
+      "description": "FinPulse Direct Deposit"
+    }
+  ]
+}

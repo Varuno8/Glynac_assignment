@@ -1,0 +1,157 @@
+{
+  "client_id": "client_101",
+  "name": "Alex Chen",
+  "age": 42,
+  "employment": {
+    "occupation": "VP of Engineering",
+    "annual_income": 320000.0,
+    "employer": "CloudScale Systems"
+  },
+  "accounts": [
+    {
+      "account_id": "acc_chk_01",
+      "type": "CHECKING",
+      "institution": "Chase Bank",
+      "balance": 380000.0,
+      "currency": "USD",
+      "interest_rate_apy": 0.0005
+    },
+    {
+      "account_id": "acc_brk_02",
+      "type": "BROKERAGE_TAXABLE",
+      "institution": "Charles Schwab",
+      "balance": 820000.0,
+      "currency": "USD",
+      "holdings": [
+        {
+          "ticker": "NVDA",
+          "asset_class": "US_EQUITY",
+          "shares": 3360.0,
+          "current_price": 125.0,
+          "market_value": 420000.0,
+          "cost_basis": 95000.0
+        },
+        {
+          "ticker": "VTI",
+          "asset_class": "US_EQUITY",
+          "shares": 950,
+          "current_price": 270.0,
+          "market_value": 256500.0,
+          "cost_basis": 210000.0
+        },
+        {
+          "ticker": "BND",
+          "asset_class": "FIXED_INCOME",
+          "shares": 1000,
+          "current_price": 72.5,
+          "market_value": 72500.0,
+          "cost_basis": 75000.0
+        },
+        {
+          "ticker": "VXUS",
+          "asset_class": "INTL_EQUITY",
+          "shares": 1200.1352265,
+          "current_price": 59.16,
+          "market_value": 71000.0,
+          "cost_basis": 68000.0
+        }
+      ]
+    },
+    {
+      "account_id": "acc_ret_03",
+      "type": "TRADITIONAL_401K",
+      "institution": "Fidelity",
+      "balance": 250000.0,
+      "currency": "USD",
+      "holdings": [
+        {
+          "ticker": "FXAIX",
+          "asset_class": "US_EQUITY",
+          "shares": 1050,
+          "current_price": 190.0,
+          "market_value": 199500.0,
+          "cost_basis": 150000.0
+        },
+        {
+          "ticker": "FXNAX",
+          "asset_class": "FIXED_INCOME",
+          "shares": 500,
+          "current_price": 101.0,
+          "market_value": 50500.0,
+          "cost_basis": 52000.0
+        }
+      ]
+    }
+  ],
+  "monthly_cashflow": {
+    "average_monthly_net_income": 18500.0,
+    "average_monthly_expenses": 9200.0,
+    "monthly_mortgage": 4200.0
+  },
+  "recent_transactions": [
+    {
+      "tx_id": "tx_101_01",
+      "date": "2026-09-01",
+      "account_id": "acc_chk_01",
+      "category": "MORTGAGE",
+      "amount": 4200.0,
+      "type": "DEBIT",
+      "description": "Wells Fargo Home Mortgage"
+    },
+    {
+      "tx_id": "tx_101_02",
+      "date": "2026-09-05",
+      "account_id": "acc_chk_01",
+      "category": "GROCERIES",
+      "amount": 620.0,
+      "type": "DEBIT",
+      "description": "Whole Foods Market"
+    },
+    {
+      "tx_id": "tx_101_03",
+      "date": "2026-09-10",
+      "account_id": "acc_chk_01",
+      "category": "UTILITIES",
+      "amount": 340.0,
+      "type": "DEBIT",
+      "description": "Pacific Gas & Electric"
+    },
+    {
+      "tx_id": "tx_101_04",
+      "date": "2026-09-15",
+      "account_id": "acc_chk_01",
+      "category": "PAYROLL",
+      "amount": 9250.0,
+      "type": "CREDIT",
+      "description": "CloudScale Direct Deposit"
+    },
+    {
+      "tx_id": "tx_101_05",
+      "date": "2026-09-21",
+      "account_id": "acc_chk_01",
+      "category": "DINING",
+      "amount": 410.0,
+      "type": "DEBIT",
+      "description": "Benu Restaurant San Francisco"
+    },
+    {
+      "tx_id": "tx_101_06",
+      "date": "2026-09-28",
+      "account_id": "acc_chk_01",
+      "category": "WIRE_TRANSFER",
+      "amount": 45000.0,
+      "type": "DEBIT",
+      "description": "Outbound Wire to BitGlobal Cayman Exchange",
+      "flagged_by_bank": true
+    },
+    {
+      "tx_id": "tx_101_07",
+      "date": "2026-09-30",
+      "account_id": "acc_chk_01",
+      "category": "PAYROLL",
+      "amount": 9250.0,
+      "type": "CREDIT",
+      "description": "CloudScale Direct Deposit"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "client_id": "client_102",
+  "name": "Sarah Connor",
+  "age": 61,
+  "employment": {
+    "occupation": "Senior Consultant",
+    "annual_income": 140000.0,
+    "employer": "Apex Strategy Partners"
+  },
+  "accounts": [
+    {
+      "account_id": "acc_chk_102",
+      "type": "CHECKING",
+      "institution": "Bank of America",
+      "balance": 28000.0,
+      "currency": "USD",
+      "interest_rate_apy": 0.0001
+    },
+    {
+      "account_id": "acc_brk_102",
+      "type": "BROKERAGE_TAXABLE",
+      "institution": "Vanguard",
+      "balance": 1250000.0,
+      "currency": "USD",
+      "holdings": [
+        {
+          "ticker": "VUG",
+          "asset_class": "US_EQUITY",
+          "shares": 2200,
+          "current_price": 390.0,
+          "market_value": 858000.0,
+          "cost_basis": 410000.0
+        },
+        {
+          "ticker": "QQQ",
+          "asset_class": "US_EQUITY",
+          "shares": 650,
+          "current_price": 490.0,
+          "market_value": 318500.0,
+          "cost_basis": 180000.0
+        },
+        {
+          "ticker": "BND",
+          "asset_class": "FIXED_INCOME",
+          "shares": 1013.79310345,
+          "current_price": 72.5,
+          "market_value": 73500.0,
+          "cost_basis": 75000.0
+        }
+      ]
+    },
+    {
+      "account_id": "acc_ira_102",
+      "type": "TRADITIONAL_IRA",
+      "institution": "Vanguard",
+      "balance": 820000.0,
+      "currency": "USD",
+      "holdings": [
+        {
+          "ticker": "VOO",
+          "asset_class": "US_EQUITY",
+          "shares": 1100,
+          "current_price": 530.0,
+          "market_value": 583000.0,
+          "cost_basis": 390000.0
+        },
+        {
+          "ticker": "VCIT",
+          "asset_class": "FIXED_INCOME",
+          "shares": 2981.13207547,
+          "current_price": 79.5,
+          "market_value": 237000.0,
+          "cost_basis": 240000.0
+        }
+      ]
+    }
+  ],
+  "monthly_cashflow": {
+    "average_monthly_net_income": 8800.0,
+    "average_monthly_expenses": 5600.0,
+    "monthly_mortgage": 0.0
+  },
+  "recent_transactions": [
+    {
+      "tx_id": "tx_102_01",
+      "date": "2026-09-02",
+      "account_id": "acc_chk_102",
+      "category": "GROCERIES",
+      "amount": 420.0,
+      "type": "DEBIT",
+      "description": "Trader Joe's"
+    },
+    {
+      "tx_id": "tx_102_02",
+      "date": "2026-09-06",
+      "account_id": "acc_chk_102",
+      "category": "MEDICAL",
+      "amount": 310.0,
+      "type": "DEBIT",
+      "description": "Mayo Clinic Co-pay"
+    },
+    {
+      "tx_id": "tx_102_03",
+      "date": "2026-09-14",
+      "account_id": "acc_chk_102",
+      "category": "LUXURY_JEWELRY",
+      "amount": 18500.0,
+      "type": "DEBIT",
+      "description": "Cartier Beverly Hills (Unusual luxury spike)",
+      "flagged_by_bank": true
+    },
+    {
+      "tx_id": "tx_102_04",
+      "date": "2026-09-15",
+      "account_id": "acc_chk_102",
+      "category": "PAYROLL",
+      "amount": 4400.0,
+      "type": "CREDIT",
+      "description": "Apex Strategy Consulting"
+    },
+    {
+      "tx_id": "tx_102_05",
+      "date": "2026-09-22",
+      "account_id": "acc_chk_102",
+      "category": "TRAVEL",
+      "amount": 6200.0,
+      "type": "DEBIT",
+      "description": "Four Seasons Bora Bora"
+    },
+    {
+      "tx_id": "tx_102_06",
+      "date": "2026-09-30",
+      "account_id": "acc_chk_102",
+      "category": "PAYROLL",
+      "amount": 4400.0,
+      "type": "CREDIT",
+      "description": "Apex Strategy Consulting"
+    }
+  ]
+}

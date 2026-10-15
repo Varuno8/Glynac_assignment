@@ -1,0 +1,388 @@
+{
+  "schema_version": 2,
+  "workflow_status": "COMPLETED",
+  "client_id": "client_103",
+  "session_id": "session_a12dc170177142fd8c53ea2636aa6961",
+  "crm_degraded": false,
+  "analysis_report": {
+    "client_id": "client_103",
+    "timestamp": "2026-10-15T19:29:57Z",
+    "metrics": {
+      "total_liquid_net_worth": 310200.0,
+      "total_cash": 3200.0,
+      "cash_percentage": 1.03,
+      "monthly_burn_rate": 10800.0,
+      "emergency_fund_months": 0.3,
+      "monthly_savings_rate_pct": 1.82,
+      "top_concentrated_position": "TSLA",
+      "top_concentration_pct": 52.39,
+      "overall_health_score": 31
+    },
+    "allocation": {
+      "actual_allocation_pct": {
+        "US_EQUITY": 98.96840747904577,
+        "INTL_EQUITY": 0.0,
+        "FIXED_INCOME": 0.0,
+        "REAL_ESTATE": 0.0,
+        "COMMODITIES": 0.0,
+        "CRYPTO": 0.0,
+        "CASH": 1.0315925209542232,
+        "UNCLASSIFIED": 0.0
+      },
+      "target_allocation_pct": {
+        "US_EQUITY": 80.0,
+        "INTL_EQUITY": 10.0,
+        "FIXED_INCOME": 0.0,
+        "CASH": 10.0,
+        "REAL_ESTATE": 0.0,
+        "CRYPTO": 0.0,
+        "COMMODITIES": 0.0
+      },
+      "drift_pct": {
+        "US_EQUITY": 18.968407479045766,
+        "INTL_EQUITY": -10.0,
+        "FIXED_INCOME": 0.0,
+        "CASH": -8.968407479045776,
+        "REAL_ESTATE": 0.0,
+        "CRYPTO": 0.0,
+        "COMMODITIES": 0.0
+      },
+      "max_drift_asset_class": "US_EQUITY",
+      "max_drift_value_pct": 18.968407479045766
+    },
+    "anomalies": [
+      {
+        "anomaly_id": "ANOM-DRIFT",
+        "anomaly_type": "ASSET_ALLOCATION_DRIFT",
+        "severity": "MEDIUM",
+        "title": "Portfolio drift in US_EQUITY",
+        "description": "Allocation differs from target by +19.0 percentage points.",
+        "evidence": {
+          "asset_class": "US_EQUITY",
+          "actual_pct": 98.96840747904577,
+          "target_pct": 80.0,
+          "drift_pct": 18.968407479045766,
+          "rebalance_amount": 58840.0
+        },
+        "recommended_action": "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes."
+      },
+      {
+        "anomaly_id": "ANOM-CONC-TSLA",
+        "anomaly_type": "CONCENTRATION_RISK",
+        "severity": "HIGH",
+        "title": "Single-stock concentration: TSLA",
+        "description": "TSLA represents 52.4% of portfolio value.",
+        "evidence": {
+          "ticker": "TSLA",
+          "market_value": 162500.0,
+          "portfolio_pct": 52.38555770470664,
+          "prudence_threshold_pct": 15.0,
+          "concentration_excess": 115970.0
+        },
+        "recommended_action": "Review diversification subject to taxes, restrictions and client objectives."
+      },
+      {
+        "anomaly_id": "ANOM-CONC-PLTR",
+        "anomaly_type": "CONCENTRATION_RISK",
+        "severity": "MEDIUM",
+        "title": "Single-stock concentration: PLTR",
+        "description": "PLTR represents 23.4% of portfolio value.",
+        "evidence": {
+          "ticker": "PLTR",
+          "market_value": 72500.0,
+          "portfolio_pct": 23.372018052869116,
+          "prudence_threshold_pct": 15.0,
+          "concentration_excess": 25970.0
+        },
+        "recommended_action": "Review diversification subject to taxes, restrictions and client objectives."
+      },
+      {
+        "anomaly_id": "ANOM-LIQUIDITY-DEFICIT",
+        "anomaly_type": "EMERGENCY_RESERVE_DEFICIT",
+        "severity": "CRITICAL",
+        "title": "Emergency reserve shortfall",
+        "description": "Available cash covers 0.3 months of reported expenses.",
+        "evidence": {
+          "current_cash_reserves": 3200.0,
+          "monthly_expenses": 10800.0,
+          "months_runway": 0.2962962962962963,
+          "target_min_months": 3.0,
+          "reserve_shortfall": 29200.0
+        },
+        "recommended_action": "Build available emergency cash to the configured reserve target."
+      },
+      {
+        "anomaly_id": "ANOM-HIGH-BURN",
+        "anomaly_type": "HIGH_BURN_RATE",
+        "severity": "MEDIUM",
+        "title": "Cashflow pressure",
+        "description": "Reported income leaves little or no monthly surplus.",
+        "evidence": {
+          "monthly_income": 11000.0,
+          "monthly_expenses": 10800.0,
+          "monthly_surplus": 200.0
+        },
+        "recommended_action": "Review recurring expenses and identify an achievable monthly savings amount."
+      }
+    ],
+    "risk_summary": "Illustrative health score 31/100; 5 risk signals.",
+    "requires_human_review": true,
+    "warnings": [],
+    "benchmark_source": "simulated fixture (not live market data)",
+    "benchmark_as_of": "2026-10-15"
+  },
+  "advisory_plan": {
+    "client_id": "client_103",
+    "client_name": "Marcus Vance",
+    "created_at": "2026-10-15T19:29:57.103199+00:00",
+    "executive_summary": "Assessment for client_103: 5 current risk signals and 5 proposed review actions. First recorded assessment; no historical observations.",
+    "key_findings": [
+      "Allocation differs from target by +19.0 percentage points.",
+      "TSLA represents 52.4% of portfolio value.",
+      "PLTR represents 23.4% of portfolio value.",
+      "Available cash covers 0.3 months of reported expenses.",
+      "Reported income leaves little or no monthly surplus."
+    ],
+    "action_items": [
+      {
+        "action_id": "ACT-ANOM-LIQUIDITY-DEFICIT",
+        "priority": "IMMEDIATE",
+        "category": "LIQUIDITY_MANAGEMENT",
+        "title": "Fund the emergency reserve shortfall",
+        "rationale": "Available cash covers 0.3 months of reported expenses.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 29200.0,
+        "action_steps": [
+          "Build available emergency cash to the configured reserve target.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-LIQUIDITY-DEFICIT"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-TSLA",
+        "priority": "HIGH",
+        "category": "RISK_MITIGATION",
+        "title": "Review single-stock diversification",
+        "rationale": "TSLA represents 52.4% of portfolio value.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 115970.0,
+        "action_steps": [
+          "Review diversification subject to taxes, restrictions and client objectives.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CONC-TSLA"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "priority": "MEDIUM",
+        "category": "PORTFOLIO_REBALANCING",
+        "title": "Coordinate portfolio rebalancing",
+        "rationale": "Allocation differs from target by +19.0 percentage points.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 58840.0,
+        "action_steps": [
+          "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-DRIFT"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-PLTR",
+        "priority": "MEDIUM",
+        "category": "RISK_MITIGATION",
+        "title": "Review single-stock diversification",
+        "rationale": "PLTR represents 23.4% of portfolio value.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 25970.0,
+        "action_steps": [
+          "Review diversification subject to taxes, restrictions and client objectives.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CONC-PLTR"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-HIGH-BURN",
+        "priority": "MEDIUM",
+        "category": "CASHFLOW_REVIEW",
+        "title": "Review monthly income and spending",
+        "rationale": "Reported income leaves little or no monthly surplus.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": null,
+        "action_steps": [
+          "Review recurring expenses and identify an achievable monthly savings amount.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-HIGH-BURN"
+        ]
+      }
+    ],
+    "meeting_agenda_topics": [
+      "Fund the emergency reserve shortfall",
+      "Review single-stock diversification",
+      "Coordinate portfolio rebalancing",
+      "Review single-stock diversification",
+      "Review monthly income and spending"
+    ],
+    "hitl_decision": {
+      "status": "APPROVED",
+      "reviewer_name": "Lead Wealth Advisor (Auto-Policy)",
+      "timestamp": "2026-10-15T19:29:57.103945+00:00",
+      "override_reason": "Explicit --auto-approve demo policy; no human review performed.",
+      "modified_actions": null
+    },
+    "compliance_notes": "Assignment demonstration using simulated data and configurable heuristics. Proposals require advisor judgment. Overlapping cash, diversification and rebalance amounts are alternatives to coordinate, not additive orders. No trades are executed.",
+    "original_action_items": [
+      {
+        "action_id": "ACT-ANOM-LIQUIDITY-DEFICIT",
+        "priority": "IMMEDIATE",
+        "category": "LIQUIDITY_MANAGEMENT",
+        "title": "Fund the emergency reserve shortfall",
+        "rationale": "Available cash covers 0.3 months of reported expenses.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 29200.0,
+        "action_steps": [
+          "Build available emergency cash to the configured reserve target.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-LIQUIDITY-DEFICIT"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-TSLA",
+        "priority": "HIGH",
+        "category": "RISK_MITIGATION",
+        "title": "Review single-stock diversification",
+        "rationale": "TSLA represents 52.4% of portfolio value.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 115970.0,
+        "action_steps": [
+          "Review diversification subject to taxes, restrictions and client objectives.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CONC-TSLA"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "priority": "MEDIUM",
+        "category": "PORTFOLIO_REBALANCING",
+        "title": "Coordinate portfolio rebalancing",
+        "rationale": "Allocation differs from target by +19.0 percentage points.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 58840.0,
+        "action_steps": [
+          "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-DRIFT"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-PLTR",
+        "priority": "MEDIUM",
+        "category": "RISK_MITIGATION",
+        "title": "Review single-stock diversification",
+        "rationale": "PLTR represents 23.4% of portfolio value.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 25970.0,
+        "action_steps": [
+          "Review diversification subject to taxes, restrictions and client objectives.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CONC-PLTR"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-HIGH-BURN",
+        "priority": "MEDIUM",
+        "category": "CASHFLOW_REVIEW",
+        "title": "Review monthly income and spending",
+        "rationale": "Reported income leaves little or no monthly surplus.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": null,
+        "action_steps": [
+          "Review recurring expenses and identify an achievable monthly savings amount.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-HIGH-BURN"
+        ]
+      }
+    ],
+    "narrative_provider": "mock",
+    "fallback_reason": null,
+    "narrative_explanations": [
+      {
+        "action_id": "ACT-ANOM-LIQUIDITY-DEFICIT",
+        "explanation": "Available cash covers 0.3 months of reported expenses."
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-TSLA",
+        "explanation": "TSLA represents 52.4% of portfolio value."
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "explanation": "Allocation differs from target by +19.0 percentage points."
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-PLTR",
+        "explanation": "PLTR represents 23.4% of portfolio value."
+      },
+      {
+        "action_id": "ACT-ANOM-HIGH-BURN",
+        "explanation": "Reported income leaves little or no monthly surplus."
+      }
+    ]
+  },
+  "session_history": [
+    {
+      "step_name": "financial_data",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Validated financial snapshot"
+    },
+    {
+      "step_name": "crm_degraded",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Agent 'DataFetcherAgent' updated 'crm_degraded'"
+    },
+    {
+      "step_name": "crm_profile",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "CRM profile or explicitly degraded context"
+    },
+    {
+      "step_name": "market_benchmarks",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Agent 'DataFetcherAgent' updated 'market_benchmarks'"
+    },
+    {
+      "step_name": "analysis_report",
+      "agent_name": "AnalyzerAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Computed financial report (Health: 31/100)"
+    },
+    {
+      "step_name": "draft_advisory_plan",
+      "agent_name": "AdvisorAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Built 5 evidence-linked actions"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "client_101": {
+    "client_id": "client_101",
+    "name": "Alex Chen",
+    "email": "alex.chen@cloudscale.example.com",
+    "phone": "+1-415-555-0199",
+    "kyc_status": "VERIFIED",
+    "risk_profile": {
+      "risk_tolerance": "MODERATE_AGGRESSIVE",
+      "risk_score": 75,
+      "target_allocation": {
+        "US_EQUITY": 60.0,
+        "INTL_EQUITY": 20.0,
+        "FIXED_INCOME": 15.0,
+        "CASH": 5.0
+      },
+      "max_drawdown_tolerance_pct": 22.0
+    },
+    "investment_goals": [
+      {"goal": "College Fund for Sophia (Age 10)", "target_amount": 250000.0, "time_horizon_years": 8},
+      {"goal": "Early Financial Independence", "target_amount": 3500000.0, "time_horizon_years": 15}
+    ],
+    "assigned_advisor": "David Ross, CFA",
+    "last_review_date": "2026-03-15",
+    "advisor_notes": "Alex is very bullish on AI infrastructure. Has accumulated substantial NVDA stock via employee incentives/RSUs. Warned him about single-stock concentration in last review. Needs to establish automated sweeps from checking to high-yield or investment accounts.",
+    "communication_preference": "EMAIL_AND_SECURE_PORTAL"
+  },
+  "client_102": {
+    "client_id": "client_102",
+    "name": "Sarah Connor",
+    "email": "sconnor@apexstrat.example.com",
+    "phone": "+1-310-555-0144",
+    "kyc_status": "VERIFIED",
+    "risk_profile": {
+      "risk_tolerance": "CONSERVATIVE",
+      "risk_score": 35,
+      "target_allocation": {
+        "US_EQUITY": 30.0,
+        "INTL_EQUITY": 10.0,
+        "FIXED_INCOME": 50.0,
+        "CASH": 10.0
+      },
+      "max_drawdown_tolerance_pct": 10.0
+    },
+    "investment_goals": [
+      {"goal": "Retirement Transition", "target_amount": 2000000.0, "time_horizon_years": 2},
+      {"goal": "Guaranteed Monthly Annuity / Income Stream", "target_amount": 8000.0, "time_horizon_years": 2}
+    ],
+    "assigned_advisor": "Rachel Zane, CFP",
+    "last_review_date": "2026-04-10",
+    "advisor_notes": "Sarah expressed anxiety about market volatility ahead of her 2028 retirement. Agreed in principle to de-risk equities down to 40% total stock exposure, but portfolio still shows high tech ETF concentration (QQQ/VUG). Need urgent rebalancing to lock in gains.",
+    "communication_preference": "PHONE_AND_IN_PERSON"
+  },
+  "client_103": {
+    "client_id": "client_103",
+    "name": "Marcus Vance",
+    "email": "m.vance@finpulse.example.com",
+    "phone": "+1-212-555-0182",
+    "kyc_status": "VERIFIED_NEEDS_REFRESH",
+    "risk_profile": {
+      "risk_tolerance": "AGGRESSIVE",
+      "risk_score": 90,
+      "target_allocation": {
+        "US_EQUITY": 80.0,
+        "INTL_EQUITY": 10.0,
+        "FIXED_INCOME": 0.0,
+        "CASH": 10.0
+      },
+      "max_drawdown_tolerance_pct": 35.0
+    },
+    "investment_goals": [
+      {"goal": "NYC Condo Down Payment", "target_amount": 180000.0, "time_horizon_years": 3}
+    ],
+    "assigned_advisor": "David Ross, CFA",
+    "last_review_date": "2026-01-20",
+    "advisor_notes": "Marcus wants maximum growth for a real estate down payment. However, having 0% cash reserves and holding high-beta stocks creates high risk of forced liquidation at market bottom.",
+    "communication_preference": "SLACK_CONNECT_AND_MOBILE"
+  }
+}

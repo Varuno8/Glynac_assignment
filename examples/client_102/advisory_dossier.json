@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "workflow_status": "COMPLETED",
+  "client_id": "client_102",
+  "session_id": "session_b0bf576cafb8418d9b7b0548cb183b55",
+  "crm_degraded": false,
+  "analysis_report": {
+    "client_id": "client_102",
+    "timestamp": "2026-10-15T19:29:57Z",
+    "metrics": {
+      "total_liquid_net_worth": 2098000.0,
+      "total_cash": 28000.0,
+      "cash_percentage": 1.33,
+      "monthly_burn_rate": 5600.0,
+      "emergency_fund_months": 5.0,
+      "monthly_savings_rate_pct": 36.36,
+      "top_concentrated_position": null,
+      "top_concentration_pct": null,
+      "overall_health_score": 55
+    },
+    "allocation": {
+      "actual_allocation_pct": {
+        "US_EQUITY": 83.86558627264061,
+        "INTL_EQUITY": 0.0,
+        "FIXED_INCOME": 14.799809342230697,
+        "REAL_ESTATE": 0.0,
+        "COMMODITIES": 0.0,
+        "CRYPTO": 0.0,
+        "CASH": 1.334604385128694,
+        "UNCLASSIFIED": 0.0
+      },
+      "target_allocation_pct": {
+        "US_EQUITY": 30.0,
+        "INTL_EQUITY": 10.0,
+        "FIXED_INCOME": 50.0,
+        "CASH": 10.0,
+        "REAL_ESTATE": 0.0,
+        "CRYPTO": 0.0,
+        "COMMODITIES": 0.0
+      },
+      "drift_pct": {
+        "US_EQUITY": 53.86558627264061,
+        "INTL_EQUITY": -10.0,
+        "FIXED_INCOME": -35.200190657769305,
+        "CASH": -8.665395614871306,
+        "REAL_ESTATE": 0.0,
+        "CRYPTO": 0.0,
+        "COMMODITIES": 0.0
+      },
+      "max_drift_asset_class": "US_EQUITY",
+      "max_drift_value_pct": 53.86558627264061
+    },
+    "anomalies": [
+      {
+        "anomaly_id": "ANOM-DRIFT",
+        "anomaly_type": "ASSET_ALLOCATION_DRIFT",
+        "severity": "HIGH",
+        "title": "Portfolio drift in US_EQUITY",
+        "description": "Allocation differs from target by +53.9 percentage points.",
+        "evidence": {
+          "asset_class": "US_EQUITY",
+          "actual_pct": 83.86558627264061,
+          "target_pct": 30.0,
+          "drift_pct": 53.86558627264061,
+          "rebalance_amount": 1130100.0
+        },
+        "recommended_action": "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes."
+      },
+      {
+        "anomaly_id": "ANOM-TX-tx_102_03",
+        "anomaly_type": "UNUSUAL_TRANSACTION_SPIKE",
+        "severity": "CRITICAL",
+        "title": "Transaction requires verification",
+        "description": "LUXURY_JEWELRY: $18,500.00 on 2026-09-14.",
+        "evidence": {
+          "tx_id": "tx_102_03",
+          "amount": 18500.0,
+          "date": "2026-09-14",
+          "flagged_by_bank": true,
+          "category": "LUXURY_JEWELRY"
+        },
+        "recommended_action": "Confirm transaction purpose and authenticity with the client."
+      }
+    ],
+    "risk_summary": "Illustrative health score 55/100; 2 risk signals.",
+    "requires_human_review": true,
+    "warnings": [],
+    "benchmark_source": "simulated fixture (not live market data)",
+    "benchmark_as_of": "2026-10-15"
+  },
+  "advisory_plan": {
+    "client_id": "client_102",
+    "client_name": "Sarah Connor",
+    "created_at": "2026-10-15T19:29:57.092154+00:00",
+    "executive_summary": "Assessment for client_102: 2 current risk signals and 2 proposed review actions. First recorded assessment; no historical observations.",
+    "key_findings": [
+      "Allocation differs from target by +53.9 percentage points.",
+      "LUXURY_JEWELRY: $18,500.00 on 2026-09-14."
+    ],
+    "action_items": [
+      {
+        "action_id": "ACT-ANOM-TX-tx_102_03",
+        "priority": "IMMEDIATE",
+        "category": "TRANSACTION_REVIEW",
+        "title": "Verify unusual transaction",
+        "rationale": "LUXURY_JEWELRY: $18,500.00 on 2026-09-14.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": null,
+        "action_steps": [
+          "Confirm transaction purpose and authenticity with the client.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-TX-tx_102_03"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "priority": "HIGH",
+        "category": "PORTFOLIO_REBALANCING",
+        "title": "Coordinate portfolio rebalancing",
+        "rationale": "Allocation differs from target by +53.9 percentage points.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 1130100.0,
+        "action_steps": [
+          "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-DRIFT"
+        ]
+      }
+    ],
+    "meeting_agenda_topics": [
+      "Verify unusual transaction",
+      "Coordinate portfolio rebalancing"
+    ],
+    "hitl_decision": {
+      "status": "APPROVED",
+      "reviewer_name": "Lead Wealth Advisor (Auto-Policy)",
+      "timestamp": "2026-10-15T19:29:57.092682+00:00",
+      "override_reason": "Explicit --auto-approve demo policy; no human review performed.",
+      "modified_actions": null
+    },
+    "compliance_notes": "Assignment demonstration using simulated data and configurable heuristics. Proposals require advisor judgment. Overlapping cash, diversification and rebalance amounts are alternatives to coordinate, not additive orders. No trades are executed.",
+    "original_action_items": [
+      {
+        "action_id": "ACT-ANOM-TX-tx_102_03",
+        "priority": "IMMEDIATE",
+        "category": "TRANSACTION_REVIEW",
+        "title": "Verify unusual transaction",
+        "rationale": "LUXURY_JEWELRY: $18,500.00 on 2026-09-14.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": null,
+        "action_steps": [
+          "Confirm transaction purpose and authenticity with the client.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-TX-tx_102_03"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "priority": "HIGH",
+        "category": "PORTFOLIO_REBALANCING",
+        "title": "Coordinate portfolio rebalancing",
+        "rationale": "Allocation differs from target by +53.9 percentage points.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 1130100.0,
+        "action_steps": [
+          "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-DRIFT"
+        ]
+      }
+    ],
+    "narrative_provider": "mock",
+    "fallback_reason": null,
+    "narrative_explanations": [
+      {
+        "action_id": "ACT-ANOM-TX-tx_102_03",
+        "explanation": "LUXURY_JEWELRY: $18,500.00 on 2026-09-14."
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "explanation": "Allocation differs from target by +53.9 percentage points."
+      }
+    ]
+  },
+  "session_history": [
+    {
+      "step_name": "financial_data",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Validated financial snapshot"
+    },
+    {
+      "step_name": "crm_degraded",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Agent 'DataFetcherAgent' updated 'crm_degraded'"
+    },
+    {
+      "step_name": "crm_profile",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "CRM profile or explicitly degraded context"
+    },
+    {
+      "step_name": "market_benchmarks",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Agent 'DataFetcherAgent' updated 'market_benchmarks'"
+    },
+    {
+      "step_name": "analysis_report",
+      "agent_name": "AnalyzerAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Computed financial report (Health: 55/100)"
+    },
+    {
+      "step_name": "draft_advisory_plan",
+      "agent_name": "AdvisorAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Built 2 evidence-linked actions"
+    }
+  ]
+}

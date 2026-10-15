@@ -1,0 +1,337 @@
+{
+  "schema_version": 2,
+  "workflow_status": "REJECTED",
+  "client_id": "client_101",
+  "session_id": "session_034028cfa9cb4fb185761499b54383e2",
+  "crm_degraded": false,
+  "analysis_report": {
+    "client_id": "client_101",
+    "timestamp": "2026-10-15T19:29:57Z",
+    "metrics": {
+      "total_liquid_net_worth": 1450000.0,
+      "total_cash": 380000.0,
+      "cash_percentage": 26.21,
+      "monthly_burn_rate": 9200.0,
+      "emergency_fund_months": 41.3,
+      "monthly_savings_rate_pct": 50.27,
+      "top_concentrated_position": "NVDA",
+      "top_concentration_pct": 28.97,
+      "overall_health_score": 46
+    },
+    "allocation": {
+      "actual_allocation_pct": {
+        "US_EQUITY": 60.41379310344828,
+        "INTL_EQUITY": 4.8965517241379315,
+        "FIXED_INCOME": 8.482758620689655,
+        "REAL_ESTATE": 0.0,
+        "COMMODITIES": 0.0,
+        "CRYPTO": 0.0,
+        "CASH": 26.20689655172414,
+        "UNCLASSIFIED": 0.0
+      },
+      "target_allocation_pct": {
+        "US_EQUITY": 60.0,
+        "INTL_EQUITY": 20.0,
+        "FIXED_INCOME": 15.0,
+        "CASH": 5.0,
+        "REAL_ESTATE": 0.0,
+        "CRYPTO": 0.0,
+        "COMMODITIES": 0.0
+      },
+      "drift_pct": {
+        "US_EQUITY": 0.4137931034482776,
+        "INTL_EQUITY": -15.103448275862068,
+        "FIXED_INCOME": -6.517241379310345,
+        "CASH": 21.20689655172414,
+        "REAL_ESTATE": 0.0,
+        "CRYPTO": 0.0,
+        "COMMODITIES": 0.0
+      },
+      "max_drift_asset_class": "CASH",
+      "max_drift_value_pct": 21.20689655172414
+    },
+    "anomalies": [
+      {
+        "anomaly_id": "ANOM-DRIFT",
+        "anomaly_type": "ASSET_ALLOCATION_DRIFT",
+        "severity": "MEDIUM",
+        "title": "Portfolio drift in CASH",
+        "description": "Allocation differs from target by +21.2 percentage points.",
+        "evidence": {
+          "asset_class": "CASH",
+          "actual_pct": 26.20689655172414,
+          "target_pct": 5.0,
+          "drift_pct": 21.20689655172414,
+          "rebalance_amount": 313500.0
+        },
+        "recommended_action": "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes."
+      },
+      {
+        "anomaly_id": "ANOM-CASH-DRAG",
+        "anomaly_type": "CASH_DRAG",
+        "severity": "MEDIUM",
+        "title": "Excess cash above allocation and reserve needs",
+        "description": "Cash allocation is 26.2%; estimated available excess is $307,500.00.",
+        "evidence": {
+          "actual_cash_pct": 26.20689655172414,
+          "target_cash_pct": 5.0,
+          "excess_cash_dollars": 307500.0,
+          "retained_reserve_dollars": 72500.0,
+          "estimated_annual_opportunity_loss_usd": 14145.0
+        },
+        "recommended_action": "Review excess cash placement while retaining the calculated operating reserve."
+      },
+      {
+        "anomaly_id": "ANOM-CONC-NVDA",
+        "anomaly_type": "CONCENTRATION_RISK",
+        "severity": "MEDIUM",
+        "title": "Single-stock concentration: NVDA",
+        "description": "NVDA represents 29.0% of portfolio value.",
+        "evidence": {
+          "ticker": "NVDA",
+          "market_value": 420000.0,
+          "portfolio_pct": 28.965517241379313,
+          "prudence_threshold_pct": 15.0,
+          "concentration_excess": 202500.0
+        },
+        "recommended_action": "Review diversification subject to taxes, restrictions and client objectives."
+      },
+      {
+        "anomaly_id": "ANOM-TX-tx_101_06",
+        "anomaly_type": "HIGH_VALUE_WIRE_TRANSFER",
+        "severity": "CRITICAL",
+        "title": "Transaction requires verification",
+        "description": "WIRE_TRANSFER: $45,000.00 on 2026-09-28.",
+        "evidence": {
+          "tx_id": "tx_101_06",
+          "amount": 45000.0,
+          "date": "2026-09-28",
+          "flagged_by_bank": true,
+          "category": "WIRE_TRANSFER"
+        },
+        "recommended_action": "Confirm transaction purpose and authenticity with the client."
+      }
+    ],
+    "risk_summary": "Illustrative health score 46/100; 4 risk signals.",
+    "requires_human_review": true,
+    "warnings": [],
+    "benchmark_source": "simulated fixture (not live market data)",
+    "benchmark_as_of": "2026-10-15"
+  },
+  "advisory_plan": {
+    "client_id": "client_101",
+    "client_name": "Alex Chen",
+    "created_at": "2026-10-15T19:29:57.135165+00:00",
+    "executive_summary": "Assessment for client_101: 4 current risk signals and 4 proposed review actions. First recorded assessment; no historical observations.",
+    "key_findings": [
+      "Allocation differs from target by +21.2 percentage points.",
+      "Cash allocation is 26.2%; estimated available excess is $307,500.00.",
+      "NVDA represents 29.0% of portfolio value.",
+      "WIRE_TRANSFER: $45,000.00 on 2026-09-28."
+    ],
+    "action_items": [
+      {
+        "action_id": "ACT-ANOM-TX-tx_101_06",
+        "priority": "IMMEDIATE",
+        "category": "SECURITY_FRAUD_ALERT",
+        "title": "Verify outbound wire",
+        "rationale": "WIRE_TRANSFER: $45,000.00 on 2026-09-28.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": null,
+        "action_steps": [
+          "Confirm transaction purpose and authenticity with the client.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-TX-tx_101_06"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "priority": "MEDIUM",
+        "category": "PORTFOLIO_REBALANCING",
+        "title": "Coordinate portfolio rebalancing",
+        "rationale": "Allocation differs from target by +21.2 percentage points.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 313500.0,
+        "action_steps": [
+          "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-DRIFT"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CASH-DRAG",
+        "priority": "MEDIUM",
+        "category": "CASH_OPTIMIZATION",
+        "title": "Review excess cash placement",
+        "rationale": "Cash allocation is 26.2%; estimated available excess is $307,500.00.",
+        "impact": "Illustrative annual gross yield difference: $14,145.00, using simulated rates; excludes fees and taxes.",
+        "estimated_dollar_amount": 307500.0,
+        "action_steps": [
+          "Review excess cash placement while retaining the calculated operating reserve.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CASH-DRAG"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-NVDA",
+        "priority": "MEDIUM",
+        "category": "RISK_MITIGATION",
+        "title": "Review single-stock diversification",
+        "rationale": "NVDA represents 29.0% of portfolio value.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 202500.0,
+        "action_steps": [
+          "Review diversification subject to taxes, restrictions and client objectives.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CONC-NVDA"
+        ]
+      }
+    ],
+    "meeting_agenda_topics": [
+      "Verify outbound wire",
+      "Coordinate portfolio rebalancing",
+      "Review excess cash placement",
+      "Review single-stock diversification"
+    ],
+    "hitl_decision": {
+      "status": "REJECTED",
+      "reviewer_name": "Demo reviewer",
+      "timestamp": "2026-10-15T19:29:57.135920+00:00",
+      "override_reason": "Verify the flagged transfer before distribution.",
+      "modified_actions": null
+    },
+    "compliance_notes": "Assignment demonstration using simulated data and configurable heuristics. Proposals require advisor judgment. Overlapping cash, diversification and rebalance amounts are alternatives to coordinate, not additive orders. No trades are executed.",
+    "original_action_items": [
+      {
+        "action_id": "ACT-ANOM-TX-tx_101_06",
+        "priority": "IMMEDIATE",
+        "category": "SECURITY_FRAUD_ALERT",
+        "title": "Verify outbound wire",
+        "rationale": "WIRE_TRANSFER: $45,000.00 on 2026-09-28.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": null,
+        "action_steps": [
+          "Confirm transaction purpose and authenticity with the client.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-TX-tx_101_06"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "priority": "MEDIUM",
+        "category": "PORTFOLIO_REBALANCING",
+        "title": "Coordinate portfolio rebalancing",
+        "rationale": "Allocation differs from target by +21.2 percentage points.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 313500.0,
+        "action_steps": [
+          "Review a coordinated rebalance against the agreed allocation, liquidity needs and taxes.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-DRIFT"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CASH-DRAG",
+        "priority": "MEDIUM",
+        "category": "CASH_OPTIMIZATION",
+        "title": "Review excess cash placement",
+        "rationale": "Cash allocation is 26.2%; estimated available excess is $307,500.00.",
+        "impact": "Illustrative annual gross yield difference: $14,145.00, using simulated rates; excludes fees and taxes.",
+        "estimated_dollar_amount": 307500.0,
+        "action_steps": [
+          "Review excess cash placement while retaining the calculated operating reserve.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CASH-DRAG"
+        ]
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-NVDA",
+        "priority": "MEDIUM",
+        "category": "RISK_MITIGATION",
+        "title": "Review single-stock diversification",
+        "rationale": "NVDA represents 29.0% of portfolio value.",
+        "impact": "Addresses the documented risk signal; outcome depends on advisor review.",
+        "estimated_dollar_amount": 202500.0,
+        "action_steps": [
+          "Review diversification subject to taxes, restrictions and client objectives.",
+          "Confirm feasibility and document the advisor's decision before implementation."
+        ],
+        "source_anomaly_ids": [
+          "ANOM-CONC-NVDA"
+        ]
+      }
+    ],
+    "narrative_provider": "mock",
+    "fallback_reason": null,
+    "narrative_explanations": [
+      {
+        "action_id": "ACT-ANOM-TX-tx_101_06",
+        "explanation": "WIRE_TRANSFER: $45,000.00 on 2026-09-28."
+      },
+      {
+        "action_id": "ACT-ANOM-DRIFT",
+        "explanation": "Allocation differs from target by +21.2 percentage points."
+      },
+      {
+        "action_id": "ACT-ANOM-CASH-DRAG",
+        "explanation": "Cash allocation is 26.2%; estimated available excess is $307,500.00."
+      },
+      {
+        "action_id": "ACT-ANOM-CONC-NVDA",
+        "explanation": "NVDA represents 29.0% of portfolio value."
+      }
+    ]
+  },
+  "session_history": [
+    {
+      "step_name": "financial_data",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Validated financial snapshot"
+    },
+    {
+      "step_name": "crm_degraded",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Agent 'DataFetcherAgent' updated 'crm_degraded'"
+    },
+    {
+      "step_name": "crm_profile",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "CRM profile or explicitly degraded context"
+    },
+    {
+      "step_name": "market_benchmarks",
+      "agent_name": "DataFetcherAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Agent 'DataFetcherAgent' updated 'market_benchmarks'"
+    },
+    {
+      "step_name": "analysis_report",
+      "agent_name": "AnalyzerAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Computed financial report (Health: 46/100)"
+    },
+    {
+      "step_name": "draft_advisory_plan",
+      "agent_name": "AdvisorAgent",
+      "timestamp": "2026-10-15T19:29:57Z",
+      "summary": "Built 4 evidence-linked actions"
+    }
+  ]
+}
